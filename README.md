@@ -58,17 +58,18 @@ sudo lldb --attach-pid $pid --batch \
     -o detach \
     -o quit
 
-    # Lua Loader 
+# Lua Loader 
+
     
-*Create the file 'gluasteal.lua' in the gluasteal directory; you can place your Lua code you wish to execute in here. This file is executed in a separate environment, not in _G, Though you will still able to access everything in _G.*
+ *Create the file 'gluasteal.lua' in the gluasteal directory; you can place your Lua code you wish to execute in here. This file is executed in a separate environment, not in _G, Though you will still able to access everything in _G.*
 
 This file will be executed every time a Garry's Mod Lua script is about to be executed. You can return false to stop the current file (stored in gluasteal.SCRIPT) from being executed.
 
-*Examples*
--- Stops scripts with the string 'derma' in their path from executing.
-if (gluasteal.SCRIPT:match("derma")) then
-	return false
-end
+    Examples
+    -- Stops scripts with the string 'derma' in their path from executing.
+    if (gluasteal.SCRIPT:match("derma")) then
+    return false
+    end 
 -- Makes the code inside the if statement only execute once, before the first Lua file is loaded
 -- also known as 'load before autorun'
 if gluasteal.SCRIPT == "lua/includes/init.lua" then
