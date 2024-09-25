@@ -14,11 +14,17 @@ gluasteal is a better, cross-platform replacement for various Lua dumpers and lo
 # Features ?
 
 Lua Dumper - Saves Lua files that are executed
+
 Lua Executor - Allows you to execute your own Lua scripts
+
 Lua Blocker - Block Lua scripts of your choosing
+
 Concurrent IO - The Lua dumper does IO in its own thread to eliminate bottleneck and ensure maximum in-game performance
+
 Robust protections against servers serving malicious file paths
+
 Easily configurable
+
 
 # How to use ?
 
