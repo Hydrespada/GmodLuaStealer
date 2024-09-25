@@ -45,24 +45,24 @@ macOS: /Users/username/gluasteal/
 
 # How to inject ?
 
-# For Windows
+ **For Windows**
 Use Extreme Injector, jector, GuidedHacking Injector, and many more.
 
-# For Linux
+ **For Linux**
 - https://github.com/gaffe23/linux-inject
 
-# For MacOs
+ **For MacOs**
 
 Use LLDB
 
 
-pid=1234
+`pid=1234
 lib_path="/full/path/to/libgluasteal.dylib"
 
 sudo lldb --attach-pid $pid --batch \
     -o "p (void*)dlopen(\"$lib_path\", 1)" \
     -o detach \
-    -o quit
+    -o quit`
 
 # Lua Loader 
 
