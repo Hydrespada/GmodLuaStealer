@@ -1,6 +1,9 @@
+![image](https://github.com/user-attachments/assets/2c1ddb2f-19e1-4714-bbef-15b0bf11960d)
+
+
 # GmodLuaStealer
 
-- Hydre
+
 
 gluasteal retrieves client-side & shared Lua files from Garry's Mod servers that you join. gluasteal also allows you to execute your own Lua code on any server.
 
@@ -24,12 +27,14 @@ Inject into Garry's Mod at the main menu.
 Optionally, set up your own Lua file to be loaded.
 Join a server.
 
-/!\
+!
 The gluasteal Directory
 Logs and Lua files will be written to the gluasteal folder, in your home directory. You may create the folder if it does not already exist.
 
 Windows: C:/Users/username/Documents/gluasteal/
+
 Linux: /home/username/gluasteal/
+
 macOS: /Users/username/gluasteal/
 
 # How to inject ?
@@ -40,5 +45,15 @@ Use Extreme Injector, jector, GuidedHacking Injector, and many more.
 # For Linux
 - https://github.com/gaffe23/linux-inject
 
+# For MacOs
 
-- 
+Use LLDB
+
+
+`pid=1234
+lib_path="/full/path/to/libgluasteal.dylib"
+
+sudo lldb --attach-pid $pid --batch \
+    -o "p (void*)dlopen(\"$lib_path\", 1)" \
+    -o detach \
+    -o quit`
